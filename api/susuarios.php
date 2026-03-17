@@ -7,5 +7,6 @@
     $prp->execute();
     $data = $prp->fetchall(PDO::FETCH_ASSOC);
     echo json_encode($data);
+    Conexao::desconectar();
 
 ?>
