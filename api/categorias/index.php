@@ -5,10 +5,10 @@
 
     $json = filter_input(INPUT_GET,'json');
     $data = json_decode($json,true);
-    $op = $data['op'];
-    $nome = $data['nome'];
-    $id = $data['id'];
-    $ativo = $data['ativo'];
+    $op = $data['op']??'';
+    $nome = $data['nome']??'';
+    $id = $data['id']??'';
+    $ativo = $data['ativo']??'';
     switch ($op) {
         case 'i':
             $sql = "insert into categorias(catnome) values(?);";
